@@ -1,13 +1,194 @@
-h1{
-    text-align: left;
-    color: rgb(5, 5, 5);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-body{
-    background-color: rgb(255, 255, 255);
-}
-MAIN{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px  ;
-    text-align: left;
-}
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&family=Nunito+Sans:wght@400;600&display=swap');
+:root {
+    --azul-escuro: #12263a;
+    --verde-agua: #0f8b8d;
+    --verde-escuro: #0a6466;
+    --laranja: #e8a33d;
+    --fundo: #f2f7f9;
+    --texto: #2b3a4a;
+  }
+
+
+  html {
+    scroll-behavior: smooth;   
+  }
+   
+  body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  h1, h2, h3 {
+    font-family: 'Outfit', sans-serif;
+    color: var(--azul-escuro);
+  }
+   
+  h1 {
+    font-size: 2.2rem;
+    margin: 30px 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 5px solid var(--laranja);  
+    display: inline-block;
+  }
+   
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    color: var(--verde-agua);
+  }
+   
+  h3 {
+    font-size: 1.2rem;
+    margin-top: 15px;
+  }
+   
+  
+  header {
+    background-color: var(--azul-escuro);
+    position: sticky;         
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  }
+  nav ul {
+    list-style: none;          
+    display: flex;             
+    flex-wrap: wrap;           
+    justify-content: center;
+    gap: 5px;
+    margin: 0;
+    padding: 10px;
+  }
+  nav a {
+    display: block;
+    padding: 8px 16px;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    text-decoration: none;     
+    border-radius: 25px;       
+    transition: 0.3s;          
+  }
+  nav a:hover {
+    background-color: var(--laranja);
+    color: var(--azul-escuro);
+  }
+   
+  header + hr {
+    display: none;             
+  }
+   
+ 
+  main a {
+    color: var(--verde-agua);
+    font-weight: 600;
+    text-decoration: none;
+  }
+   
+  main a:hover {
+    color: var(--laranja);
+    text-decoration: underline;
+  }
+   
+ 
+  main ul {
+    padding-left: 22px;
+  }
+   
+  main li::marker {
+    color: var(--laranja);     
+  }
+   
+  
+  img {
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(18, 38, 58, 0.2);
+    margin: 10px 0;
+  }
+   
+  .foto {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;         
+    border-radius: 50%;        
+    border: 6px solid var(--verde-agua);
+  }
+   
+  
+  hr {
+    border: 0;
+    border-top: 2px solid #cfdde4;
+    opacity: 1;
+  }
+   
+  
+  form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 600px;
+    box-shadow: 0 6px 18px rgba(18, 38, 58, 0.12);
+  }
+   
+  input {
+    margin-top: 5px;
+  }
+   
+  input:focus {
+    border-color: var(--verde-agua);
+    box-shadow: 0 0 0 4px rgba(15, 139, 141, 0.2);
+  }
+   
+ 
+  .btn {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    border-radius: 25px;
+    padding: 8px 22px;
+  }
+   
+  .btn-primary {
+    --bs-btn-bg: var(--verde-agua);
+    --bs-btn-border-color: var(--verde-agua);
+    --bs-btn-hover-bg: var(--verde-escuro);
+    --bs-btn-hover-border-color: var(--verde-escuro);
+    --bs-btn-active-bg: var(--verde-escuro);
+    --bs-btn-active-border-color: var(--verde-escuro);
+  }
+   
+ 
+  table {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(18, 38, 58, 0.12);
+  }
+   
+  th {
+    background-color: var(--azul-escuro) !important;
+    color: white !important;
+    font-family: 'Outfit', sans-serif;
+  }
+   
+ 
+  .col-md-4 {
+    margin-bottom: 25px;
+  }
+   
+
+  footer {
+    background-color: var(--azul-escuro);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+   
+  
+  @media (max-width: 767px) {
+    body { font-size: 16px; }
+    h1 { font-size: 1.7rem; }
+    .foto { width: 160px; height: 160px; }
+  }
